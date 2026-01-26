@@ -10,8 +10,7 @@
 
     <style>
         :root {
-            --primary: #6366f1; /* Modern Indigo */
-            --accent: #ff014f;
+            --primary: #6366f1; 
             --bg: #f8fafc;
             --card-bg: #ffffff;
             --text-main: #1e293b;
@@ -48,13 +47,24 @@
         .social-box a { width: 45px; height: 45px; background: white; display: flex; align-items: center; justify-content: center; border-radius: 12px; box-shadow: var(--shadow); color: var(--text-main); font-size: 1.2rem; }
         .social-box a:hover { background: var(--primary); color: white; transform: translateY(-3px); }
 
+        /* CLEAN IMAGE STYLING (NO FRAME) */
         .hero-image { flex: 0.8; display: flex; justify-content: center; }
-        .img-wrap { position: relative; width: 320px; height: 400px; }
-        .img-wrap::before { content: ''; position: absolute; top: 20px; left: 20px; width: 100%; height: 100%; border: 4px solid var(--primary); border-radius: 24px; z-index: -1; }
-        .img-wrap img { width: 100%; height: 100%; object-fit: cover; border-radius: 24px; box-shadow: var(--shadow); }
+        .img-wrap { 
+            width: 300px; 
+            height: 380px; 
+            border-radius: 24px;
+            box-shadow: var(--shadow);
+            overflow: hidden; /* Clips image to the rounded corners */
+        }
+        .img-wrap img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            display: block;
+        }
 
         /* Sections */
-        section { padding: 100px 0; }
+        section { padding: 80px 0; }
         .section-header { text-align: center; margin-bottom: 60px; }
         .section-header h2 { font-size: 2.2rem; font-family: 'Poppins'; position: relative; display: inline-block; padding-bottom: 10px; }
         .section-header h2::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 60px; height: 4px; background: var(--primary); border-radius: 2px; }
@@ -93,7 +103,7 @@
             .hero-content h1 { font-size: 2.5rem; }
             .hero-content p { margin: 20px auto 30px auto; }
             .social-box { justify-content: center; }
-            .img-wrap { width: 280px; height: 350px; }
+            .img-wrap { width: 260px; height: 330px; }
             .nav-links { display: none; }
         }
     </style>
@@ -116,7 +126,7 @@
             <span class="hero-tag">Data Science & Machine Learning</span>
             <h1>Hi, I'm <span>En Sreythom</span></h1>
             <p>
-                A Data Science student at ITC & Tux Global Institute. I specialize in turning complex datasets into clear, actionable insights for public and private sectors.
+                A 5th-year Data Science student at ITC & Tux Global Institute. I specialize in turning complex datasets into clear, actionable insights for public and private sectors.
             </p>
             <div class="social-box">
                 <a href="https://github.com/EnSreythom" target="_blank"><i class="fab fa-github"></i></a>
@@ -126,7 +136,7 @@
         </div>
         <div class="hero-image">
             <div class="img-wrap">
-                <img src="image.jpg" alt="En Sreythom Profile">
+                <img src="image.jpg" alt="En Sreythom Profile Photo">
             </div>
         </div>
     </section>
@@ -152,7 +162,7 @@
                 <p>SQL (PostgreSQL, MySQL), Data Cleaning</p>
             </div>
             <div class="skill-card">
-                <div style="font-size: 2.5rem; color: var(--primary); margin-bottom: 15px;"><i class="fas fa-brain"></i></div>
+                <i class="fas fa-brain"></i>
                 <h4>ML Ops</h4>
                 <p>Regression, Classification, & Clustering</p>
             </div>
@@ -168,19 +178,25 @@
                 <div class="project-info">
                     <span class="project-tag">Predictive Modeling</span>
                     <h3>Student Performance</h3>
-                    <p>Applied Machine Learning to identify students at risk and key factors influencing academic performance.</p>
-                    <a href="https://github.com/EnSreythom/student-performance.git" target="_blank" class="project-link">Source Code <i class="fas fa-arrow-right"></i></a>
+                    <p>Applied ML to identify students at risk and key factors influencing academic success.</p>
+                    <a href="https://github.com/EnSreythom/Predictive-Analysis-on-Student-Performance" target="_blank" class="project-link">Source Code <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="project-card">
                 <div class="project-info">
                     <span class="project-tag">Unsupervised Learning</span>
                     <h3>Customer Segmentation</h3>
-                    <p>Clustered retail transaction data using RFM analysis to drive targeted marketing strategies.</p>
-                    <a href="https://github.com/EnSreythom/customer-segmentation.git" target="_blank" class="project-link">Source Code <i class="fas fa-arrow-right"></i></a>
+                    <p>Clustered retail transaction data using RFM analysis for targeted marketing strategies.</p>
+                    <a href="https://github.com/EnSreythom/Customer-Segmentation-Sales-Analysis" target="_blank" class="project-link">Source Code <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
-    
+            <div class="project-card">
+                <div class="project-info">
+                    <span class="project-tag">Classification</span>
+                    <h3>Customer Churn</h3>
+                    <p>Predicted customer behavior using Logistic Regression and Decision Trees.</p>
+                    <a href="https://github.com/EnSreythom/Customer-Churn-Analysis" target="_blank" class="project-link">Source Code <i class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
         </div>
     </section>
@@ -193,12 +209,12 @@
             <div class="timeline-item">
                 <span>Current | 2021 — 2026</span>
                 <h3>Bachelor Degree in Data Science</h3>
-                <p>Institute of Technology of Cambodia</p>
+                <p>Institute of Technology of Cambodia & Tux Global Institute</p>
             </div>
             <div class="timeline-item">
                 <span>Internship | 2 Months</span>
                 <h3>Data Analyst Intern — MPWT</h3>
-                <p>Built traffic monitoring dashboards for the Expressway and processed government infrastructure data.</p>
+                <p>Built traffic monitoring dashboards and processed large infrastructure datasets.</p>
             </div>
         </div>
     </section>
@@ -211,7 +227,6 @@
         <div class="contact-pills">
             <div class="pill"><i class="fas fa-phone"></i> +855 68 276 154</div>
             <div class="pill"><i class="fas fa-envelope"></i> ensreythom@gmail.com</div>
-            <div class="pill"><i class="fas fa-map-marker-alt"></i> Phnom Penh, Cambodia</div>
         </div>
         <div style="margin-top: 40px; opacity: 0.5; font-size: 0.8rem;">
             &copy; 2026 En Sreythom. All rights reserved.
